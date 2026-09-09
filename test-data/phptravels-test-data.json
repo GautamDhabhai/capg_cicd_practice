@@ -1,0 +1,256 @@
+{
+  "environment": {
+    "baseUrl": "https://phptravels.net/",
+    "demoWarningButton": "I Understand & Continue",
+    "supportedCurrencies": ["USD", "EUR", "GBP", "AED"],
+    "supportedLanguages": ["English", "Arabic", "French", "German"],
+    "defaultCountry": "United States",
+    "defaultPhoneCountryCode": "+1"
+  },
+  "auth": {
+    "validCustomer": {
+      "email": "customer.demo@example.com",
+      "password": "Demo@12345",
+      "rememberMe": true
+    },
+    "invalidCustomer": {
+      "email": "unknown.user@example.com",
+      "password": "WrongPass123!",
+      "emptyEmail": "",
+      "emptyPassword": "",
+      "malformedEmail": "not-an-email"
+    },
+    "signup": {
+      "customer": {
+        "firstName": "Ava",
+        "lastName": "Patel",
+        "email": "ava.patel+customer@example.com",
+        "password": "SecurePass!2026",
+        "phone": "+1 415 555 0187"
+      },
+      "agent": {
+        "firstName": "Daniel",
+        "lastName": "Morris",
+        "email": "daniel.morris+agent@example.com",
+        "password": "AgentPass!2026",
+        "company": "Northstar Travel Co.",
+        "phone": "+44 20 7946 0958"
+      }
+    },
+    "resetPassword": {
+      "validEmail": "customer.demo@example.com",
+      "invalidEmail": "invalid-email",
+      "emptyEmail": "",
+      "unknownEmail": "noaccount@example.com"
+    }
+  },
+  "hotelSearch": {
+    "valid": {
+      "destination": "Dubai",
+      "hotelName": "Marriott Marquis Dubai",
+      "checkIn": "2026-11-15",
+      "checkOut": "2026-11-18",
+      "adults": 2,
+      "rooms": 1,
+      "children": 0,
+      "nationality": "United Arab Emirates"
+    },
+    "alternate": {
+      "destination": "Paris",
+      "hotelName": "Hotel Le Marais",
+      "checkIn": "2026-12-10",
+      "checkOut": "2026-12-12",
+      "adults": 2,
+      "rooms": 1,
+      "children": 1,
+      "nationality": "France"
+    },
+    "invalidDates": {
+      "pastCheckIn": "2025-08-01",
+      "checkoutBeforeCheckin": "2026-11-15",
+      "sameDay": "2026-11-15",
+      "zeroGuests": 0,
+      "negativeGuests": -1,
+      "oversizedRooms": 99,
+      "oversizedGuests": 100
+    },
+    "missing": {
+      "emptyDestination": "",
+      "emptyCheckIn": "",
+      "emptyCheckOut": "",
+      "emptyGuests": ""
+    }
+  },
+  "flightSearch": {
+    "valid": {
+      "tripType": "round-trip",
+      "origin": "New York (JFK)",
+      "destination": "London (LHR)",
+      "departureDate": "2026-11-20",
+      "returnDate": "2026-11-27",
+      "adults": 2,
+      "children": 0,
+      "infants": 0,
+      "cabinClass": "Economy"
+    },
+    "oneWay": {
+      "tripType": "one-way",
+      "origin": "Dubai (DXB)",
+      "destination": "Singapore (SIN)",
+      "departureDate": "2026-12-12",
+      "adults": 1,
+      "children": 0,
+      "infants": 0,
+      "cabinClass": "Business"
+    },
+    "multiCity": {
+      "tripType": "multi-city",
+      "segments": [
+        {
+          "origin": "Paris (CDG)",
+          "destination": "Rome (FCO)",
+          "departureDate": "2026-12-05"
+        },
+        {
+          "origin": "Rome (FCO)",
+          "destination": "Berlin (BER)",
+          "departureDate": "2026-12-09"
+        }
+      ],
+      "adults": 1,
+      "children": 0,
+      "infants": 0
+    },
+    "invalid": {
+      "missingOrigin": "",
+      "missingDestination": "",
+      "sameRoute": "London (LHR)",
+      "invalidAirport": "NotARealAirport",
+      "pastDate": "2025-09-01",
+      "returnBeforeDeparture": "2026-11-18",
+      "zeroPassengers": 0,
+      "excessivePassengers": 20
+    }
+  },
+  "visaRequest": {
+    "valid": {
+      "country": "United Arab Emirates",
+      "destination": "Saudi Arabia",
+      "fullName": "Maya Johnson",
+      "email": "maya.johnson@example.com",
+      "phone": "+971 50 123 4567",
+      "travelDate": "2026-12-15",
+      "passportNumber": "P1234567",
+      "nationality": "United Kingdom"
+    },
+    "invalid": {
+      "emptyCountry": "",
+      "malformedEmail": "maya@",
+      "oversizedText": "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum ",
+      "maliciousInput": "<script>alert('x')</script>",
+      "sqlLikeInput": "SELECT * FROM users WHERE name = 'admin'"
+    }
+  },
+  "aiPlanner": {
+    "valid": {
+      "prompt": "Plan a 5-day family trip to Dubai with a beachfront hotel, theme park visit, desert safari, and a relaxed dinner reservation.",
+      "longPrompt": "Create a detailed 7-day itinerary for a couple visiting Tokyo, including neighborhoods, train travel, food recommendations, weather considerations, and cultural experiences for a moderate budget."
+    },
+    "invalid": {
+      "emptyPrompt": "",
+      "oversizedPrompt": "This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test This is a test ",
+      "scriptPayload": "alert(1); DROP TABLE trips; --",
+      "sqlPayload": "SELECT * FROM bookings WHERE user_id = 1;"
+    }
+  },
+  "traveler": {
+    "adult": {
+      "firstName": "James",
+      "lastName": "Carter",
+      "dob": "1988-04-25",
+      "passportNumber": "C1234567",
+      "nationality": "United States",
+      "email": "james.carter@example.com",
+      "phone": "+1 212 555 0144"
+    },
+    "child": {
+      "firstName": "Zoe",
+      "lastName": "Carter",
+      "dob": "2017-07-08",
+      "passportNumber": "C7654321",
+      "nationality": "United States"
+    },
+    "infant": {
+      "firstName": "Liam",
+      "lastName": "Carter",
+      "dob": "2025-02-14",
+      "passportNumber": "C9876543",
+      "nationality": "United States"
+    },
+    "invalid": {
+      "malformedEmail": "james@",
+      "missingPhone": "",
+      "emptyFirstName": "",
+      "invalidPassport": "INVALID!",
+      "unicodeName": "José Álvarez",
+      "longName": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    }
+  },
+  "payment": {
+    "sandbox": {
+      "success": "Success",
+      "declined": "Declined",
+      "timeout": "Timeout",
+      "duplicateAttempt": "Double-submit"
+    },
+    "cardData": {
+      "valid": {
+        "name": "James Carter",
+        "number": "4242 4242 4242 4242",
+        "expiry": "12/30",
+        "cvv": "123"
+      },
+      "invalid": {
+        "emptyName": "",
+        "shortCard": "4242 4242 4242 424",
+        "badExpiry": "13/99",
+        "badCvv": "12"
+      }
+    }
+  },
+  "support": {
+    "refund": {
+      "bookingReference": "PHX-2026-1182",
+      "email": "support.demo@example.com",
+      "reason": "Flight was cancelled by airline and rescheduled by more than 24 hours.",
+      "invalidReason": "bad reason <script>evil()</script>",
+      "emptyReference": ""
+    },
+    "claim": {
+      "bookingReference": "PHX-2026-1182",
+      "email": "claims.demo@example.com",
+      "reason": "Hotel room was not as advertised and required an immediate relocation.",
+      "mismatchedReference": "PHX-9999-0000"
+    }
+  },
+  "securityPayloads": [
+    "<script>alert(1)</script>",
+    "javascript:alert('x')",
+    "SELECT * FROM users WHERE id = 1;",
+    "DROP TABLE bookings;",
+    "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "👩‍💻 中文 🚀",
+    "../../../../../etc/passwd",
+    "\" onfocus=\"alert(1)\""
+  ],
+  "boundaryValues": {
+    "minLengthName": "A",
+    "maxLengthName": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+    "maxLengthEmail": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa@example.com",
+    "minPhone": "+1",
+    "maxPhone": "+1 999999999999999",
+    "unicodeName": "José María González",
+    "nearLimitText": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum dolor sit amet, consectetur adipiscing elit. "
+  }
+}
+  
