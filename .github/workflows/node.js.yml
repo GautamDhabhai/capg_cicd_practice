@@ -31,6 +31,9 @@ jobs:
 
       - name: Clear npm cache
         run: npm cache clean --force
+
+      - name: Delete package-lock.json
+        run: rm -f package-lock.json
   
       - name: Install dependencies
         run: npm install
