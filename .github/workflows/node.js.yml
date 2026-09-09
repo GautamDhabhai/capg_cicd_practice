@@ -28,8 +28,6 @@ jobs:
         with:
           node-version: 20
 
-      - name: Remove package-lock.json
-        run: rm -f package-lock.json
 
       - name: Clear npm cache
         run: npm cache clean --force
