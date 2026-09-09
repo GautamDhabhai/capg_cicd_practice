@@ -1,0 +1,30 @@
+{
+  "servers": {
+    "playwright-test": {
+      "type": "stdio",
+      "command": "npx",
+      "args": [
+        "playwright",
+        "run-test-mcp-server"
+      ]
+    },
+    "github": {
+        "command": "npx",
+        "args": [
+        "-y",
+        "@modelcontextprotocol/server-github"
+        ],
+        "env": {
+          "GITHUB_PERSONAL_ACCESS_TOKEN": "${input:git_mcp_token}"
+      }
+    }
+  },
+  "inputs": [
+    {
+    "type": "promptString",
+    "id": "git_mcp_token",
+    "description": "GitHub PAT",
+    "password": true
+  }
+  ]
+}
